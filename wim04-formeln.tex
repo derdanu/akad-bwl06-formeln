@@ -1,0 +1,157 @@
+\documentclass[a4paper,12pt]{scrartcl} 
+
+%\usepackage[latin1]{inputenc} 
+%Apple \usepackage[applemac]{inputenc} 
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+
+%Das Paket erzeugt ein anklickbares Verzeichnis in der PDF-Datei.
+\usepackage[hyperfootnotes=false,colorlinks=true,linkcolor=black,urlcolor=black]{hyperref}
+
+%Das Paket wird fr die anderthalb-zeiligen Zeilenabstand bentigt
+\usepackage{setspace}
+
+%Einrückung eines neuen Absatzes
+\setlength{\parindent}{0em}
+
+%Definition der Rnder
+\usepackage[paper=a4paper,left=30mm,right=30mm,top=30mm,bottom=30mm]{geometry} 
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{graphicx}
+\usepackage{mathcomp}
+\usepackage{polynom}
+\usepackage{hyperref}
+\usepackage[nottoc]{tocbibind} % Anzeigen des Verzeichnisse im TOC
+\usepackage{mathtools} 
+
+%Abstand der Fußnoten
+\deffootnote{1em}{1em}{\textsuperscript{\thefootnotemark\ }}
+
+%Regeln, bis zu welcher Tiefe (section,subsection,subsubsection) Überschriften angezeigt werden sollen (Anzeige der Überschriften im Verzeichnis / Anzeige der Nummerierung)
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+\pagenumbering{roman}
+
+%-------------------
+%Ende des Kopfbereiches
+%-------------------
+
+
+\begin{document}
+
+
+
+%Beginn der Titelseite
+\begin{titlepage}
+\begin{small}
+\vfill {AKAD\\ 
+Bachelor of Science (Wirtschaftsinformatik) \\ 
+Modulzusammenfassung}
+\end{small}
+
+
+\begin{center}
+\begin{Large}
+\vfill {\textsf{\textbf{
+BWL06 \\
+\vspace*{1cm} 
+Formelsammlung
+}}}
+\end{Large}
+\end{center}
+
+\begin{small}
+\vfill Daniel Falkner \\ Rotbach 529 \\  94078 Freyung \\  daniel.falkner@akad.de \\ 
+\today
+\end{small}
+
+\end{titlepage}
+%Ende der Titelseite
+
+
+%Inhaltsverzeichnis (aktualisiert sich erst nach dem zweiten Setzen)
+\tableofcontents
+
+%Beginn einer neuen Seite
+\clearpage
+
+%Anderthalbzeiliger Zeilenabstand ab hier
+\onehalfspacing
+
+\pagestyle{plain}
+
+
+\pagenumbering{arabic}
+
+\section{Investitionsrechnung bei sicheren Erwartungen}
+\subsection{statische Verfahren}
+\subsubsection{gebundenes Kapital}
+$\oslash$ gebundenes Kapital = $\cfrac{Anschaffungswert + Restwert}{2}$
+\subsubsection{kalkulatorische Zinsen}
+$\oslash$ kalkulatorische Zinsen = Kalkulationszinssatz * $\oslash$ gebundenes Kapital
+\subsubsection{Kalkulatorische Abschreibungen}
+Kalkulatorische Abschreibungen = $\cfrac{Anschaffungswert - Restwert}{Nutzungsdauer}$
+
+\subsection{Gewinnvergleichsrechnung}
+\subsubsection{Gewinn}
+Gewinn = Erlös - Kosten
+
+\subsection{Rentabilitätsvergleichsrechnung}
+\subsubsection{Rentabilität}
+Rentabilität = $\cfrac{\oslash Gewinn + \oslash kalkulatorische Zinsen}{\oslash gebundenes Kaputal} * 100\% $
+
+\subsection{statische Amortisationsrechnung}
+\subsubsection{Amortisationsdauer}
+Amortisationsdauer = $\cfrac{Urpr"unglich~eingesetztes~Kapital}{j"ahrliche~Kapitalwiedergewinnung~aus~Zahlungsübersch"ussen}$
+\subsubsection{Amortisationsdauer Durchschnittsmethode}
+Amortisationsdauer = $\cfrac{Urpr"unglich eingesetztes Kapital}{\oslash Gewinn + \oslash kalkulatorische EK-Zinsen + \oslash Abschreibungen}$
+\subsubsection{Amortisationsdauer Kummulationsmethode}
+Amortisationsdauer = Anzahl der Jahre vor der vollständigen Amortisation + \\ 
+\begin{small}
+$\cfrac{zur~Amortisation~fehlender~Betrag \\ am~Ende~der~letzten~Periode ohne~vollst"andige~Amortisation}{Nettozahlung~im~Jahr~der~Amortisation}$
+\end{small}
+
+
+
+Formal $n^* = (n^+ - 1) + \cfrac{A_0 + \displaystyle\sum_{t=1}^{n^+-1} E-A}{(E - A)_{n^+}}$
+
+\subsection{dynamisiche Verfahren}
+\subsubsection{gewogener Kapitalkostensatz}
+gewogener Kapitalkostensatz = $\cfrac{EK * i_{EK} + FK * i_{FK}}{EK + FK}$ \\
+\vspace*{5mm}
+
+\textit{
+mit EK = Eigenkapital, FK = Fremdkapital, $i_{EK}$ = Zinssatz für das EK (=Mindestrenditeforderung des Eigenkapitalgebers) und $i_{FK}$ = Zinssatz für das FK (=Kosten des Fremdkapitals)
+}
+\subsubsection{Eigenkapitalkosten}
+Eigenkapitalkosten = risikoloser Zins + Risikoprämie
+
+\subsection{Kapitalwertmethode}
+\subsubsection{Ermittlung von Kapitalwerten}
+$C_0 = \displaystyle\sum_{t=1}^{n} (E_t - A_t) * (1+i)^{-1}$ bzw. \\
+$C_0 = -A_0 + \displaystyle\sum_{t=1}^{n} (E_t - A_t) * (1+i)^{-1}$ \\
+$C_0 = \displaystyle\sum_{t=1}^{n} \cfrac{Z_t}{(1+i)^t}$ \\
+$C_0 = Z_0 + \displaystyle\sum_{t=1}^{n} \cfrac{Z_t}{(1+i)^t}$ 
+\\
+\vspace*{5mm}
+
+C > 0 Ertrag der Investition "ubersteigt den Kalkulationszinssatz = Verm"ogenszuwachs bezogen auf $t_0$ \\
+C < 0 Ertrag der Investition liegt unter dem Kalkulationszinssatz = Verm"ogensabnahme bezogen auf $t_0$
+
+\subsection{Annuitätenmethode}
+\subsubsection{Annuitätenfaktor}
+$\cfrac{i * (1+1)^n}{(1+i)^n -1}$
+\subsubsection{Annuität Gesamtformel}
+$ g = C_0 * \cfrac{i * (1+1)^n}{(1+i)^n -1}$
+
+
+
+
+
+\end{document}
+
+
