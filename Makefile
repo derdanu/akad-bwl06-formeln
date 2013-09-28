@@ -1,4 +1,4 @@
-filename = bwl06-formeln
+filename = bwl09-formeln
 
 UNAME_S := $(shell uname -s)
 
