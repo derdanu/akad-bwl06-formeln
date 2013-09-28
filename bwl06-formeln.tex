@@ -140,8 +140,7 @@ gewogener Kapitalkostensatz WACC \footnote{WACC = weighted average cost of capit
 \subsubsection{Eigenkapitalkosten}
 Eigenkapitalkosten = risikoloser Zins + Risikoprämie
 
-\subsection{Abzinsungsfaktor}
-$(1+i)^{-n}$
+
 
 \subsection{dynamische Amortisationsrechnung}
 Amortisationsdauer = Anzahl der Jahre vor der vollständigen Amortisation \footnote{aus auf den Zeitpunkt $t_0$ diskontierten Zahlungen} + \\ 
@@ -149,10 +148,14 @@ Amortisationsdauer = Anzahl der Jahre vor der vollständigen Amortisation \footn
 $\cfrac{Summe~der~auf~den~Zeitpunkt~t_0~ diskontierten~Zahlungen~bis~zur~lezten~Periode~ohne~vollständige~Amortisation}{auf~t_0~diskontierte~Nettozahlung~im~Jahr~der~Amortisation}$
 \end{small}
 
+\subsubsection{Abzinsungsfaktor}
+$(1+i)^{-n}$
+
 \subsection{Kapitalwertmethode}
+\textit{Realisiere jede Investition mit einem positiven Kapitalwert bzw. F"uhre diejenige Investition mit dem h"ochsten positiven Kapitalwert durch.}
 \subsubsection{Ermittlung von Kapitalwerten}
-$C_0 = \displaystyle\sum_{t=1}^{n} (E_t - A_t) * (1+i)^{-1}$ bzw. \\
-$C_0 = -A_0 + \displaystyle\sum_{t=1}^{n} (E_t - A_t) * (1+i)^{-1}$ \\
+$C_0 = \displaystyle\sum_{t=1}^{n} (E_t - A_t) * (1+i)^{-t}$ bzw. \\
+$C_0 = -A_0 + \displaystyle\sum_{t=1}^{n} (E_t - A_t) * (1+i)^{-t}$ \\
 $C_0 = \displaystyle\sum_{t=1}^{n} \cfrac{Z_t}{(1+i)^t}$ \\
 $C_0 = Z_0 + \displaystyle\sum_{t=1}^{n} \cfrac{Z_t}{(1+i)^t}$ 
 \\
@@ -166,13 +169,20 @@ Mit Restwert \footnote{Sofern der Restwert nicht schon bei der Ermittlung der le
 $C_0 = Z_0 + \displaystyle\sum_{t=1}^{n} \cfrac{Z_t}{(1+i)^t} + \cfrac{RW_n}{(1+i)^n}$  \\
 
 \subsection{Annuitätenmethode}
+\textit{Realisiere Investitionen mit positiver Annuit"at bzw Realisiere diejenige Investition mit der h"ochsten positiven Annuit"at.}
 \subsubsection{Annuitätenfaktor}
 $\cfrac{i * (1+1)^n}{(1+i)^n -1}$
 \subsubsection{Annuität Gesamtformel}
 $ g = C_0 * \cfrac{i * (1+1)^n}{(1+i)^n -1}$
 
+\subsection{Der Interne Zinsfuß}
+\textit{In der Finanzmathematik wird unterschieden zwischen dem Zinsfuß (p) und dem Zinssatz ($i=\cfrac{p}{100}$)}. \\
+\textit{Realisiere jedes Vorhaben, wenn sein Interner Zins die geforderte Mindestrendite "ubersteigt bzw. Realisiere das Vorhaben mit dem h"ochsten Internen Zins, sofern dieser die geforderte Mindestrendite erreicht.}
 
-
+\subsubsection{Interer Zinssatz}
+$C_0(i) = -A_0 + \displaystyle\sum_{t=1}^{n} E_t - A_t * (1+i)^{-t} = 0$
+\\
+N"aherungswert f"ur $i_{int} = i_{pos} + C_{pos} * \cfrac{i_{neg} - i_{pos}}{C_{pos} - C_{neg}}$
 
 
 \end{document}
