@@ -87,24 +87,32 @@ Formelsammlung
 
 \pagenumbering{arabic}
 
-\section{Investitionsrechnung bei sicheren Erwartungen}
-\subsection{statische Verfahren}
+\section{Investitionsrechnung bei sicheren Erwartungen - statische Verfahren}
+\subsection{Kostenvergleichsrechnung}
+\textit{Wähle diejenige Investition mit den geringsten durchschnittlichen Gesamtkosten.}
 \subsubsection{gebundenes Kapital}
 $\oslash$ gebundenes Kapital = $\cfrac{Anschaffungswert + Restwert}{2}$
 \subsubsection{kalkulatorische Zinsen}
 $\oslash$ kalkulatorische Zinsen = Kalkulationszinssatz * $\oslash$ gebundenes Kapital
 \subsubsection{Kalkulatorische Abschreibungen}
 Kalkulatorische Abschreibungen = $\cfrac{Anschaffungswert - Restwert}{Nutzungsdauer}$
+\subsubsection{Kosten}
+$K = K_f + K_v$
+\subsubsection{variable Stückkosten}
+$k_v = \cfrac{K-K_f}{x}$
 
 \subsection{Gewinnvergleichsrechnung}
+\textit{Wähle diejenige Alternative mit dem höchsten (durchschnittlichen Gewinn).}
 \subsubsection{Gewinn}
 Gewinn = Erlös - Kosten
 
 \subsection{Rentabilitätsvergleichsrechnung}
+\textit{Realisiere jede Investition, die eine geforderte Mindestrentabilität erwirtschaftet.}
 \subsubsection{Rentabilität}
 Rentabilität = $\cfrac{\oslash Gewinn + \oslash kalkulatorische Zinsen}{\oslash gebundenes Kaputal} * 100\% $
 
-\subsection{statische Amortisationsrechnung}
+\subsection{Amortisationsrechnung}
+\textit{Realisiere Investitionen, soweit ihre Amortisationsdauer geringer ist als eine maximal zulässige (subjektiv vorgegebene) Dauer }\footnote{Diese Dauer wird in Abhängigkeit von der betrachteten Investition (Risiko) und der Liquiditätslage des Unternehmens festgelegt}
 \subsubsection{Amortisationsdauer}
 Amortisationsdauer = $\cfrac{Urpr"unglich~eingesetztes~Kapital}{j"ahrliche~Kapitalwiedergewinnung~aus~Zahlungsübersch"ussen}$
 \subsubsection{Amortisationsdauer Durchschnittsmethode}
@@ -119,17 +127,25 @@ $\cfrac{zur~Amortisation~fehlender~Betrag \\ am~Ende~der~letzten~Periode ohne~vo
 
 Formal $n^* = (n^+ - 1) + \cfrac{A_0 + \displaystyle\sum_{t=1}^{n^+-1} E-A}{(E - A)_{n^+}}$
 
-\subsection{dynamisiche Verfahren}
+\section{Investitionsrechnung bei sicheren Erwartungen - dynamische Verfahren}
+\subsection{Zinssatz}
 \subsubsection{gewogener Kapitalkostensatz}
 gewogener Kapitalkostensatz = $\cfrac{EK * i_{EK} + FK * i_{FK}}{EK + FK}$ \\
 \vspace*{5mm}
 
+\begin{small}
 \textit{
-mit EK = Eigenkapital, FK = Fremdkapital, $i_{EK}$ = Zinssatz für das EK (=Mindestrenditeforderung des Eigenkapitalgebers) und $i_{FK}$ = Zinssatz für das FK (=Kosten des Fremdkapitals)
+mit EK = Eigenkapital, FK = Fremdkapital, \\ $i_{EK}$ = Zinssatz für das EK (=Mindestrenditeforderung des Eigenkapitalgebers) \\ $i_{FK}$ = Zinssatz für das FK (=Kosten des Fremdkapitals)
 }
+\end{small}
 \subsubsection{Eigenkapitalkosten}
 Eigenkapitalkosten = risikoloser Zins + Risikoprämie
 
+\subsection{dynamische Amortisationsrechnung}
+Amortisationsdauer = Anzahl der Jahre vor der vollständigen Amortisation \footnote{aus auf den Zeitpunkt $t_0$ diskontierten Zahlungen} + \\ 
+\begin{small}
+$\cfrac{Summe~der~auf~den~Zeitpunkt~t_0~ diskontierten~Zahlungen~bis~zur~lezten~Periode~ohne~vollständige~Amortisation}{auf~t_0~diskontierte~Nettozahlung~im~Zahl~der~Amortisation}$
+\end{small}
 \subsection{Kapitalwertmethode}
 \subsubsection{Ermittlung von Kapitalwerten}
 $C_0 = \displaystyle\sum_{t=1}^{n} (E_t - A_t) * (1+i)^{-1}$ bzw. \\
