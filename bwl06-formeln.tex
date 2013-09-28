@@ -128,24 +128,27 @@ $\cfrac{zur~Amortisation~fehlender~Betrag \\ am~Ende~der~letzten~Periode ohne~vo
 Formal $n^* = (n^+ - 1) + \cfrac{A_0 + \displaystyle\sum_{t=1}^{n^+-1} E-A}{(E - A)_{n^+}}$
 
 \section{Investitionsrechnung bei sicheren Erwartungen - dynamische Verfahren}
-\subsection{Zinssatz}
-\subsubsection{gewogener Kapitalkostensatz}
-gewogener Kapitalkostensatz = $\cfrac{EK * i_{EK} + FK * i_{FK}}{EK + FK}$ \\
+\subsection{Anforderungen an einen plausiblen Zinssatz}
+\subsubsection{gewogener Kapitalkostensatz WACC}
+gewogener Kapitalkostensatz WACC \footnote{WACC = weighted average cost of capital} = $\cfrac{EK * i_{EK} + FK * i_{FK}}{EK + FK}$ \\
 \vspace*{5mm}
 
 \begin{small}
-\textit{
-mit EK = Eigenkapital, FK = Fremdkapital, \\ $i_{EK}$ = Zinssatz für das EK (=Mindestrenditeforderung des Eigenkapitalgebers) \\ $i_{FK}$ = Zinssatz für das FK (=Kosten des Fremdkapitals)
+\textit{mit EK = Eigenkapital, FK = Fremdkapital, \\ $i_{EK}$ = Zinssatz für das EK (=Mindestrenditeforderung des Eigenkapitalgebers) \\ $i_{FK}$ = Zinssatz für das FK (=Kosten des Fremdkapitals)
 }
 \end{small}
 \subsubsection{Eigenkapitalkosten}
 Eigenkapitalkosten = risikoloser Zins + Risikoprämie
 
+\subsection{Abzinsungsfaktor}
+$(1+i)^{-n}$
+
 \subsection{dynamische Amortisationsrechnung}
 Amortisationsdauer = Anzahl der Jahre vor der vollständigen Amortisation \footnote{aus auf den Zeitpunkt $t_0$ diskontierten Zahlungen} + \\ 
 \begin{small}
-$\cfrac{Summe~der~auf~den~Zeitpunkt~t_0~ diskontierten~Zahlungen~bis~zur~lezten~Periode~ohne~vollständige~Amortisation}{auf~t_0~diskontierte~Nettozahlung~im~Zahl~der~Amortisation}$
+$\cfrac{Summe~der~auf~den~Zeitpunkt~t_0~ diskontierten~Zahlungen~bis~zur~lezten~Periode~ohne~vollständige~Amortisation}{auf~t_0~diskontierte~Nettozahlung~im~Jahr~der~Amortisation}$
 \end{small}
+
 \subsection{Kapitalwertmethode}
 \subsubsection{Ermittlung von Kapitalwerten}
 $C_0 = \displaystyle\sum_{t=1}^{n} (E_t - A_t) * (1+i)^{-1}$ bzw. \\
